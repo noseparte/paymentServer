@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<commodityConfigs>
+  <commodityConfig id="1" item="60" reward="-1" firstReward="2" cost="0.01" tradeName="钻石" notice="方块王国通用货币60钻石" />
+  <commodityConfig id="2" item="180" reward="-1" firstReward="8" cost="0.02" tradeName="钻石" notice="方块王国通用货币180钻石" />
+  <commodityConfig id="3" item="300" reward="-1" firstReward="40" cost="0.03" tradeName="钻石" notice="方块王国通用货币300钻石" />
+  <commodityConfig id="4" item="1280" reward="-1" firstReward="288" cost="0.04" tradeName="钻石" notice="方块王国通用货币1280钻石" />
+  <commodityConfig id="5" item="2560" reward="-1" firstReward="588" cost="0.05" tradeName="钻石" notice="方块王国通用货币2560钻石" />
+  <commodityConfig id="6" item="6480" reward="-1" firstReward="1480" cost="0.06" tradeName="钻石" notice="方块王国通用货币6480钻石" />
+</commodityConfigs>

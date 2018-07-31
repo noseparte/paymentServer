@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+	<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+	<property resource="datasource.properties" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+    <!-- 数据库sql_log -->
+	<appender name="mybatis_sql_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+		<File>${log.base}mybatis_sql/mybatis_sql.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}mybatis_sql/%d{yyyy-MM-dd}.mybatis_sql.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n</pattern>
+		</layout> -->
+	</appender>
+	<logger name="mybatis_sql_log" level="INFO">
+		<appender-ref ref="mybatis_sql_log" />
+	</logger>
+	
+	<!--项目 xmbl_log -->
+	<appender name="xmbl_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+		<File>${log.base}xmbl/xmbl.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}xmbl/%d{yyyy-MM-dd}.xmbl.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="xmbl_log" level="INFO">
+		<appender-ref ref="xmbl_log" />
+	</logger>
+
+	<!--项目慢查询performance_slow_xmbl_log -->
+	<appender name="performance_slow_xmbl_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+		</encoder>
+		<File>${log.base}performance_slow_xmbl/performance_slow_xmbl.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}performance_slow_xmbl/%d{yyyy-MM-dd}.performance_slow_xmbl.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="performance_slow_xmbl_log" level="INFO">
+		<appender-ref ref="performance_slow_xmbl_log" />
+	</logger>
+
+	<!--项目performance_xmbl_log -->
+	<appender name="performance_xmbl_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}performance_xmbl/performance_xmbl.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}performance_xmbl/%d{yyyy-MM-dd}.performance_xmbl.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="performance_xmbl_log" level="INFO">
+		<appender-ref ref="performance_xmbl_log" />
+	</logger>
+	
+
+	<!--项目任务日志 -->
+	<appender name="xmbl_task_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}performance_xmbl/performance_xmbl.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}performance_xmbl/%d{yyyy-MM-dd}.performance_xmbl.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="performance_xmbl_log" level="INFO">
+		<appender-ref ref="performance_xmbl_log" />
+	</logger>
+	
+	
+	<appender name="session_expired_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}session_expired_log/session_expired_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}session_expired_log/%d{yyyy-MM-dd}.session_expired_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="session_expired_log" level="INFO">
+		<appender-ref ref="session_expired_log" />
+	</logger>
+	
+	<appender name="GGmGetServerInfo_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}GGmGetServerInfo_log/GGmGetServerInfo_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}GGmGetServerInfo_log/%d{yyyy-MM-dd}.GGmGetServerInfo_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="GGmGetServerInfo_log" level="INFO">
+		<appender-ref ref="GGmGetServerInfo_log" />
+	</logger>
+	
+	<appender name="GGmSendAllEmail_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}GGmSendAllEmail_log/GGmSendAllEmail_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}GGmSendAllEmail_log/%d{yyyy-MM-dd}.GGmSendAllEmail_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="GGmSendAllEmail_log" level="INFO">
+		<appender-ref ref="GGmSendAllEmail_log" />
+	</logger>
+	
+	<appender name="GGmSendMessage_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}GGmSendMessage_log/GGmSendMessage_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}GGmSendMessage_log/%d{yyyy-MM-dd}.GGmSendMessage_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="GGmSendMessage_log" level="INFO">
+		<appender-ref ref="GGmSendMessage_log" />
+	</logger>
+	
+	<appender name="GGmSendPlayerEmail_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}GGmSendPlayerEmail_log/GGmSendPlayerEmail_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}GGmSendPlayerEmail_log/%d{yyyy-MM-dd}.GGmSendPlayerEmail_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="GGmSendPlayerEmail_log" level="INFO">
+		<appender-ref ref="GGmSendPlayerEmail_log" />
+	</logger>
+	
+	<appender name="GGmSendServerStatus_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}GGmSendServerStatus_log/GGmSendServerStatus_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}GGmSendServerStatus_log/%d{yyyy-MM-dd}.GGmSendServerStatus_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="GGmSendServerStatus_log" level="INFO">
+		<appender-ref ref="GGmSendServerStatus_log" />
+	</logger>
+	
+	<appender name="PGGmSetPlayerChat_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}PGGmSetPlayerChat_log/PGGmSetPlayerChat_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}PGGmSetPlayerChat_log/%d{yyyy-MM-dd}.PGGmSetPlayerChat_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="PGGmSetPlayerChat_log" level="INFO">
+		<appender-ref ref="PGGmSetPlayerChat_log" />
+	</logger>
+	
+	<appender name="PGGmSetPlayerLogin_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}PGGmSetPlayerLogin_log/PGGmSetPlayerLogin_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}PGGmSetPlayerLogin_log/%d{yyyy-MM-dd}.PGGmSetPlayerLogin_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="PGGmSetPlayerLogin_log" level="INFO">
+		<appender-ref ref="PGGmSetPlayerLogin_log" />
+	</logger>
+	
+	<appender name="test_kafka_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}test_kafka_log/test_kafka_log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${log.base}test_kafka_log/%d{yyyy-MM-dd}.test_kafka_log.log.zip
+			</FileNamePattern>
+		</rollingPolicy>
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%thread${log.separator}%date${log.separator}%-5level${log.separator}%logger${log.separator}%M${log.separator}%msg%n
+			</pattern>
+		</layout> -->
+	</appender>
+	<logger name="test_kafka_log" level="INFO">
+		<appender-ref ref="test_kafka_log" />
+	</logger>
+	
+		<appender name="kafka_log"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%msg%n
+			</pattern>
+		</encoder>
+		<File>${log.base}kafka_log/kafka_log.log</File>
+		<!--  <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+		<fileNamePattern>${log.base}kafka_log/%d{yyyy-MM-dd}-%i.kafka_log.log.zip
+			</fileNamePattern>
+			
+			 <!-- rollover daily -->
+      <!-- <fileNamePattern>${log.base}kafka_log/%d{yyyy-MM-dd}.%i.kafka_log.log.zip</fileNamePattern>
+       --><!-- each file should be at most 100MB, keep 60 days worth of history, but at most 20GB -->
+       <maxFileSize>50MB</maxFileSize>    
+       <maxHistory>60</maxHistory>
+       <totalSizeCap>20GB</totalSizeCap>
+		</rollingPolicy>
+   <!--  <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <maxFileSize>20MB</maxFileSize>
+    </triggeringPolicy> -->
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n
+			</pattern>
+		</layout>
+	</appender>
+	<logger name="kafka_log" level="INFO">
+		<appender-ref ref="kafka_log" />
+	</logger>
+	
+	
+	<logger name="com.xmbl.model" level="DEBUG" />
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />  
+	</root>
+</configuration>  
