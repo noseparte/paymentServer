@@ -2,8 +2,6 @@ package com.xmbl.web.api.bean;
 
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
-import java.nio.charset.Charset;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -12,22 +10,23 @@ import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class PageData<K,V> extends HashMap<Object, Object> implements Map<Object, Object>,Serializable{
+public class PageData extends HashMap<Object, Object> implements Map<Object, Object>,Serializable{
 
 	private static final long serialVersionUID = 1L;
 
 	Map<Object, Object> map = null;
 	HttpServletRequest request;
 
+	@SuppressWarnings("rawtypes")
 	public PageData(HttpServletRequest request) throws UnsupportedEncodingException {
 		this.request = request;
 		Map<String, String[]> properties = request.getParameterMap();
 		Map<Object, Object> returnMap = new HashMap<Object, Object>();
 		Iterator<Entry<String, String[]>> entries = properties.entrySet().iterator();
-		Map.Entry entry;
+		Entry entry;
 		String name = "";
 		while (entries.hasNext()) {
-			entry = (Map.Entry) entries.next();
+			entry = (Entry) entries.next();
 			name = (String) entry.getKey();
 			Object valueObj = entry.getValue();
 			if (null == valueObj) {
@@ -97,6 +96,12 @@ public class PageData<K,V> extends HashMap<Object, Object> implements Map<Object
 		}
 	}
 	
+	public Integer getInteger(Object key) {
+		if (null == get(key))
+			return -1;
+		else
+			return Integer.parseInt(get(key).toString());
+	}
 	
 	public String getString(Object key) {
 		if (null == get(key))
@@ -127,7 +132,7 @@ public class PageData<K,V> extends HashMap<Object, Object> implements Map<Object
 		return map.containsValue(value);
 	}
 
-	public Set<Map.Entry<Object,Object>> entrySet() {
+	public Set<Entry<Object,Object>> entrySet() {
 		return map.entrySet();
 	}
 

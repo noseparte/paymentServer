@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.security.MessageDigest;
 import java.util.Random;
 
+import lombok.extern.java.Log;
+
 public final class Md5PasswordEncoder {
 	/**
 	 * MD5字符
@@ -69,4 +71,15 @@ public final class Md5PasswordEncoder {
 		return str.charAt(k);
 	}
 
+	public static void main(String[] args) {
+		
+		
+		try {
+			String encode = encode("xmbl888...");
+			System.out.println(encode);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

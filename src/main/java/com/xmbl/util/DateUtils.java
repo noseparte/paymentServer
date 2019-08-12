@@ -612,6 +612,17 @@ public class DateUtils {
 
     }
 
+	/*
+	 * 将时间戳转换为时间
+	 */
+	public static String stampToDate(long s){
+		String res;
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		long lt = new Long(s);
+		Date date = new Date(lt);
+		res = simpleDateFormat.format(date);
+		return res;
+	}
 
     /**
      * 获得当前时间当天的开始时间，即当前给出的时间那一天的0时0分0秒的时间
@@ -629,7 +640,6 @@ public class DateUtils {
                 e.printStackTrace();
             }
         }
-
         return null;
     }
 
@@ -874,7 +884,6 @@ public class DateUtils {
 			Long time2 = date2.getTime();
 			return  (time1 - time2 <= 0);
 		} catch (Exception e){
-//			e.printStackTrace();
 			return false;
 		}
 	}

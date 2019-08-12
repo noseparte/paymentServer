@@ -12,7 +12,7 @@ import com.xmbl.model.GameServers;
 import com.xmbl.mongo.dao.GeneralDaoImpl;
 
 @Repository
-public class IGameServersDaoImpl extends GeneralDaoImpl<GameServers> implements IGameServersDao{
+public class IGameServersDaoImpl extends GeneralDaoImpl<GameServers> implements IGameServersDao {
 
 	@Override
 	protected Class<GameServers> getEntityClass() {
@@ -23,16 +23,28 @@ public class IGameServersDaoImpl extends GeneralDaoImpl<GameServers> implements 
 	public List<GameServers> getServerListByTypeAndOperatorStatus(String type, Integer operatorStatus) {
 		try {
 			Query query = new Query();
-			 Criteria criteria = new Criteria();
-			 criteria = criteria.and("type").is(type);
-			 criteria = criteria.and("operatorStatus").is(operatorStatus);
-			 query.addCriteria(criteria);
-			 List<GameServers> gameServerLst = getMongoTemplate().find(query, GameServers.class, "gameservers");
-			 return gameServerLst;
+			Criteria criteria = new Criteria();
+			criteria = criteria.and("type").is(type);
+			criteria = criteria.and("operatorStatus").is(operatorStatus);
+			query.addCriteria(criteria);
+			List<GameServers> gameServerLst = getMongoTemplate().find(query, GameServers.class, "gameservers");
+			return gameServerLst;
 		} catch (Exception e) {
 			e.printStackTrace();
 			return Collections.emptyList();
 		}
+	}
+
+	@Override
+	public GameServers getServerByServerIdAndTypeAndOperatorStatus(Long serverId, String type, Integer operatorStatus) {
+		Query query = new Query();
+		Criteria criteria = new Criteria();
+		criteria = criteria.and("serverId").is(serverId);
+		criteria = criteria.and("type").is(type);
+		criteria = criteria.and("operatorStatus").is(operatorStatus);
+		query.addCriteria(criteria);
+		GameServers gameServers = getMongoTemplate().findOne(query, GameServers.class, "gameservers");
+		return gameServers;
 	}
 
 }

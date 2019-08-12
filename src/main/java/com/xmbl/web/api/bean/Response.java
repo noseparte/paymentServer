@@ -1,13 +1,11 @@
 package com.xmbl.web.api.bean;
 
 public class Response {
-
-	
-	 private static final String STATE = "ok";
+	 	private static final String STATE = "ok";
 	    private static final String ERROR = "error";
 
-	    private Meta meta;
-	    private Object data;
+	    private Meta meta;	//response的对象(状态 | 状态码)
+	    private Object data;	//response的数据
 
 	    public Response success() {
 	        this.meta = new Meta(true, STATE);
@@ -30,12 +28,6 @@ public class Response {
 	        return this;
 	    }
 
-	    public Response failure(Object data) {
-	        this.meta = new Meta(false, ERROR);
-	        this.data = data;
-	        return this;
-	    }
-	    
 	    public Meta getMeta() {
 	        return meta;
 	    }

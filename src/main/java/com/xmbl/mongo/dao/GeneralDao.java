@@ -31,7 +31,7 @@ public interface GeneralDao<T> {
 		 * @return 返回分页后Pagination实体
 		 */
 		public Pagination<T> findPaginationByQuery(Query query, int pageNo,
-				int pageSize) throws Exception;
+                                                   int pageSize) throws Exception;
 
 		/**
 		 * 插入
@@ -104,7 +104,7 @@ public interface GeneralDao<T> {
 		 * @param query
 		 * @param update
 		 */
-		public void updateAllByQuery(Query query,Update update) throws Exception;
+		public void updateAllByQuery(Query query, Update update) throws Exception;
 		
 		public Integer findCountByQuery(Query query) throws Exception;
 

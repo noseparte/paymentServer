@@ -250,7 +250,7 @@ public class WXPayUtil {
      * @return MD5结果
      */
     public static String MD5(String data) throws Exception {
-        java.security.MessageDigest md = MessageDigest.getInstance("MD5");
+        MessageDigest md = MessageDigest.getInstance("MD5");
         byte[] array = md.digest(data.getBytes("UTF-8"));
         StringBuilder sb = new StringBuilder();
         for (byte item : array) {

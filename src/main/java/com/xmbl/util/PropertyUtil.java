@@ -4,21 +4,15 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Properties;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * 读取配置文件 util
  * @author sunbenbao
  *
  */
 public class PropertyUtil {
-	private static final Logger logger = LoggerFactory.getLogger(PropertyUtil.class);
     private static Properties props;
-
     private synchronized static void loadProps(String fileName){
-        logger.info("开始加载properties文件内容.......");
+        XmblLoggerUtil.info("开始加载properties文件内容.......");
         props = new Properties();
         InputStreamReader in = null;
         try {
@@ -28,20 +22,20 @@ public class PropertyUtil {
             //in = PropertyUtil.class.getResourceAsStream("/" + fileName);
             props.load(in);
         } catch (FileNotFoundException e) {
-            logger.error(fileName+"文件未找到");
+        	XmblLoggerUtil.error(fileName,"文件未找到");
         } catch (IOException e) {
-            logger.error("出现IOException");
+            XmblLoggerUtil.error("出现IOException");
         } finally {
             try {
                 if(null != in) {
                     in.close();
                 }
             } catch (IOException e) {
-                logger.error(fileName+"文件流关闭出现异常");
+                XmblLoggerUtil.error(fileName,"文件流关闭出现异常");
             }
         }
-        logger.info("加载properties文件内容完成...........");
-        logger.info("properties文件内容：" + props);
+        XmblLoggerUtil.info("加载properties文件内容完成...........");
+        XmblLoggerUtil.info("properties文件内容：" ,props.toString());
     }
 
     /**
@@ -51,14 +45,19 @@ public class PropertyUtil {
      * @return
      */
     public static String getProperty(String fileName,String key){
-        if(null == props || (props!=null && (props.get("propName") == null || !props.get("propName").equals(fileName)))) {
+//    	logger.info(String.valueOf(props.get("propName")));
+        if(null == props || (props!=null && (String.valueOf(props.get("propName")) == null || !String.valueOf(props.get("propName")).equals(fileName)))) {
             loadProps(fileName);
         }
 //        boolean hasEnv = getIsHasEnv(fileName,key);
         String envStr = String.valueOf(props.get("env"));
-        if (key!=null && !key.equals("env") && key.indexOf(envStr)==-1 && getIsHasEnv(fileName,key)) {// 有环境
-        	String env =props.getProperty("env");
-        	return props.getProperty(env+"."+key);
+        if ("dev.env".equals(key) || "test.env".equals(key) || "pro.env".equals(key) || "env".equals(key)) {
+        	return envStr;
+        }
+        if (key!=null && key.indexOf(envStr) < 0 && getIsHasEnv(fileName,key)) {// 有环境
+        	StringBuilder sb = new StringBuilder();
+        	sb.append(envStr).append(".").append(key);
+        	return props.getProperty(sb.toString());
         } else {//没有环境
         	return props.getProperty(key);
         }
@@ -79,7 +78,9 @@ public class PropertyUtil {
         String envStr = String.valueOf(props.get("env"));
         if (key!=null && !key.equals("env") && key.indexOf(envStr)==-1 && getIsHasEnv(fileName,key)) {// 有环境
         	String env =props.getProperty("env");
-        	return props.getProperty(env+"."+key,defaultValue);
+        	StringBuilder sb = new StringBuilder();
+        	sb.append(env).append(".").append(key);
+        	return props.getProperty(sb.toString(),defaultValue);
         } else {//没有环境
         	return props.getProperty(key,defaultValue);
         }
@@ -97,8 +98,8 @@ public class PropertyUtil {
     public static void main(String[] args){
     	String env = getProperty("conf/env.properties", "env");
     	System.out.println(env);
-    	String mchId = getProperty("conf/env.properties", "dev.mchId");
-    	System.out.println(mchId);
+    	String rest_url = getProperty("conf/env.properties", "sms.rest_url");
+    	System.out.println(rest_url);
     }
     
 }

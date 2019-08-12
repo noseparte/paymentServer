@@ -8,6 +8,9 @@ public class CommonConstant {
 	
 	public final static int ALIPAY_WAYTD = 1;
 	public final static int WEIXIN_WAYTD = 2;
+	public final static int APPLE_WAYTD = 3;
+	public final static int GOOGLE_WAYTD = 4;
 	
+	public final static int HOST_COMMENTS_NUM = 3;
 	
 }

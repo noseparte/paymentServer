@@ -30,7 +30,7 @@ public interface GeneralService<T>{
 	 * @return 返回分页后Pagination实体
 	 */
 	public Pagination<T> findPaginationByQuery(Query query, int pageNo,
-			int pageSize) throws Exception;
+                                               int pageSize) throws Exception;
 
 	/**
 	 * 插入

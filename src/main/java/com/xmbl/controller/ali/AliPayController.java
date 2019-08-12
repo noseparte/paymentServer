@@ -1,4 +1,4 @@
-package com.xmbl.controller;
+package com.xmbl.controller.ali;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -13,6 +13,7 @@ import com.alipay.api.request.AlipayFundTransToaccountTransferRequest;
 import com.alipay.api.request.AlipayTradeWapPayRequest;
 import com.alipay.api.response.AlipayFundTransOrderQueryResponse;
 import com.alipay.api.response.AlipayFundTransToaccountTransferResponse;
+import com.xmbl.base.BaseController;
 import com.xmbl.constant.AlipayConfig;
 import com.xmbl.constant.CommonConstant;
 import com.xmbl.model.ThirdPayBean;
@@ -46,7 +47,7 @@ import java.util.Map;
 @Slf4j
 @RestController
 @RequestMapping(value = Route.PATH + Route.Payment.PATH)
-public class AliPayController {
+public class AliPayController extends BaseController {
 
     @Autowired
     private AppUserService appUserService;
@@ -239,7 +240,7 @@ public class AliPayController {
      * @param //PassWord      //用户密码
      * @return http://www.ugcapp.com:8028/paymentServer/api/pay/transfer
      */
-    @RequestMapping(value = Route.Payment.TRANSFER, method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
+    @RequestMapping(value = Route.Payment.ALI_TRANSFER, method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
     @ResponseBody
     public String transfer(@RequestBody String transferInfo) {
         log.info("infoMsg:--- 用户提现申请开始。======================" + DateUtils.formatDate(new Date(), "YYYY-mm-dd HH:mm:ss"));
