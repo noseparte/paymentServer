@@ -2,6 +2,7 @@ package com.xmbl.controller.wx;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.xmbl.base.BaseController;
 import com.xmbl.constant.GoodsInfoConstant;
 import com.xmbl.constant.WxpayConfig;
 import com.xmbl.service.RechargeRecordService;
@@ -16,11 +17,11 @@ import com.xmbl.web.api.bean.Route;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
@@ -39,9 +40,9 @@ import java.util.Map;
  * @Description 微信 APP支付
  */
 @Slf4j
-@Controller
+@RestController
 @RequestMapping(value = Route.PATH + Route.Payment.PATH)
-public class WxPayController {
+public class WxPayController extends BaseController {
 
     @Autowired
     private RechargeRecordService rechargeRecordService;

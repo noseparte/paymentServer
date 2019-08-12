@@ -66,7 +66,6 @@ public class AliPayController extends BaseController {
      * @return
      */
     @RequestMapping(value = Route.Payment.ALI_PAY, method = RequestMethod.POST)
-    @ResponseBody
     public Response ali_pay_h(@RequestParam("userId") int userId, @RequestParam("amount") String amount) {
         log.info("infoMsg:--- 支付宝请求交易开始");
         try {
@@ -117,7 +116,6 @@ public class AliPayController extends BaseController {
      * @return
      */
     @RequestMapping(value = "/ali_pay_h", method = RequestMethod.POST)
-    @ResponseBody
     public Response ali_pay_h5(@RequestParam("userId") int userId, @RequestParam("amount") String amount) {
         log.info("infoMsg:--- 支付宝请求交易开始");
         try {
@@ -169,7 +167,6 @@ public class AliPayController extends BaseController {
      * @return
      */
     @RequestMapping(value = Route.Payment.ALI_PAY_NOTIFY, method = RequestMethod.POST)
-    @ResponseBody
     public Response alipay_notify(HttpServletRequest request) {
         log.info("infoMsg:--- 支付宝验证异步通知信息开始");
         //----------------请求参数------------------//
@@ -241,7 +238,6 @@ public class AliPayController extends BaseController {
      * @return http://www.ugcapp.com:8028/paymentServer/api/pay/transfer
      */
     @RequestMapping(value = Route.Payment.ALI_TRANSFER, method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
-    @ResponseBody
     public String transfer(@RequestBody String transferInfo) {
         log.info("infoMsg:--- 用户提现申请开始。======================" + DateUtils.formatDate(new Date(), "YYYY-mm-dd HH:mm:ss"));
         JSONObject transferResult = new JSONObject();
