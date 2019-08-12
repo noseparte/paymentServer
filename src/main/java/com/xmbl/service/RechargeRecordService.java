@@ -38,7 +38,7 @@ public class RechargeRecordService {
 	 *  
 	 * @param attach
 	 * @param amount
-	 * @param out_trade_no
+	 * @param outTradeNo
 	 * @return
 	 */
 	public boolean generatedBills(String attach, String amount, String outTradeNo) {
@@ -76,7 +76,7 @@ public class RechargeRecordService {
 	 * 
 	 * @param attach
 	 * @param returnAmount
-	 * @param order_no
+	 * @param ordeNo
 	 * @return
 	 */
 	public boolean updateBillWeiXin(String attach ,Double returnAmount, String ordeNo) {
