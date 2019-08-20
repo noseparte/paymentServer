@@ -37,6 +37,9 @@ public class RechargeRecord extends GeneralBean {
 	private int orderState; // 订单状态 0:已到账 | 1:未到账
 	private String remark; // 备注
 
+	public RechargeRecord() {
+		super();
+	}
 
 	public RechargeRecord(Long playerId, String accountId, String userKey, String originalOrderId, String orderNo, int orderType, String goodID,int goodNum,
 			String goodName, String amount, Date orderTime, int orderState, String remark) {
@@ -56,6 +59,4 @@ public class RechargeRecord extends GeneralBean {
 		this.remark = remark;
 	}
 
-	public RechargeRecord(Long playerId, String accountId, String userKey, String outTradeNo, String goodID, String goodName, String amount, Date date, int unusual, String remark) {
-	}
 }

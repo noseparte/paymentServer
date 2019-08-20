@@ -1,0 +1,13 @@
+.container{
+	border: 1px solid black;
+	margin:20px;background-color: #696969;height:100%;
+	background: url(../../../images/bg1.jpg) no-repeat
+}
+
+.mui-card-header{
+	
+}
+
+.mui-card-footer{
+	bottom: 0;position: fixed;
+}

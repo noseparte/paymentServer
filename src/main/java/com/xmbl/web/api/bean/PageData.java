@@ -23,10 +23,10 @@ public class PageData extends HashMap<Object, Object> implements Map<Object, Obj
 		Map<String, String[]> properties = request.getParameterMap();
 		Map<Object, Object> returnMap = new HashMap<Object, Object>();
 		Iterator<Entry<String, String[]>> entries = properties.entrySet().iterator();
-		Entry entry;
+		Map.Entry entry;
 		String name = "";
 		while (entries.hasNext()) {
-			entry = (Entry) entries.next();
+			entry = (Map.Entry) entries.next();
 			name = (String) entry.getKey();
 			Object valueObj = entry.getValue();
 			if (null == valueObj) {
@@ -132,7 +132,7 @@ public class PageData extends HashMap<Object, Object> implements Map<Object, Obj
 		return map.containsValue(value);
 	}
 
-	public Set<Entry<Object,Object>> entrySet() {
+	public Set<Map.Entry<Object,Object>> entrySet() {
 		return map.entrySet();
 	}
 

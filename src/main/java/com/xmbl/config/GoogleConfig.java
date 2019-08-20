@@ -11,9 +11,9 @@ package com.xmbl.config;
 public class GoogleConfig {
 
     // 应用网关
-    public final static String CLIENT_ID = "";
+    public final static String CLIENT_ID = "297443935842-ctan4cmo5hkin9ir8qp1h4fo798b1n10.apps.googleusercontent.com";
 
-    public final static String ACCOUNT_ID = "";
+    public final static String ACCOUNT_ID = "fkcz-899@fkcz-224508.iam.gserviceaccount.com";
 
     public final static String CLIENT_SECRET = "Cf1FZbFZHWlxp63VTWDVqlXD";
 

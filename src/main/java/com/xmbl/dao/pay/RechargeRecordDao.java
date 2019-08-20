@@ -7,7 +7,7 @@ import com.xmbl.mongo.dao.GeneralDao;
 
 public interface RechargeRecordDao extends GeneralDao<RechargeRecord>{
 
-	 void updateBill(String transaction_id, String ordeNo, String remark);
+	 void updateBill(String transaction_id, String ordeNo,String remark);
 	 
 	 List<RechargeRecord> findAppleUnAccountingOrder();
 	 

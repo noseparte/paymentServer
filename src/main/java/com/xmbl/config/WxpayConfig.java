@@ -18,11 +18,11 @@ public class WxpayConfig {
 	// 商户ID
 	public final static String MCH_ID = "1509358601";
 	// 应用ID
-	public final static String APP_ID = "";
+	public final static String APP_ID = "wx6ed869909f329685";
 	// API秘钥
-	public final static String APP_KEY = "";
+	public final static String APP_KEY = "eBOVj3hjJD4K3LdO8Kr1OWCP0oKuh1OO";
 	// 应用秘钥
-	public final static String App_Secret = "";
+	public final static String App_Secret = "c57ac24bf4649ba887c4b7dd257461a3";
 	// 异步通知地址
 	public static String NOTIFY_URL = PropertyUtil.getProperty("conf/env.properties", "wxpay.notifyurl");
 	

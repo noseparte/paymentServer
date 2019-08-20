@@ -6,16 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="paymentServer" />
+        <module name="Infrastructure" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="paymentServer" target="1.8" />
+      <module name="Infrastructure" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="paymentServer" options="-parameters" />
+      <module name="Infrastructure" options="-Xlint:all" />
     </option>
   </component>
 </project>

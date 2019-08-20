@@ -22,7 +22,7 @@ import com.xmbl.web.api.bean.Response;
 
 /**
  * Copyright © 2017 noseparte(Libra) © Like the wind, like rain
- *
+ * 
  * @Author Noseparte
  * @Compile 2017年10月8日 -- 下午3:12:58
  * @Version 1.0
@@ -85,9 +85,9 @@ public class BaseController {
 
 	/**
 	 * 只返回pd
-	 *
+	 * 
 	 * @param pd
-	 * @param pd (应用的名字)
+	 * @param systemServer(应用的名字)
 	 * @return
 	 */
 	@Deprecated
@@ -132,7 +132,7 @@ public class BaseController {
 
 	/**
 	 * 分页封装
-	 *
+	 * 
 	 * @param list
 	 * @return
 	 */
