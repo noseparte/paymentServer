@@ -19,7 +19,7 @@
 		<httpclient.version>3.1</httpclient.version>
 		<logback.version>1.2.3</logback.version>
 		<servlet.version>3.1.0</servlet.version>
-		<spring-data-mongodb>1.6.0.RELEASE</spring-data-mongodb>
+		<spring-data-mongodb>3.3.5</spring-data-mongodb>
 		<commons-codec.version>1.9</commons-codec.version>
 		<aspectjweaver.version>1.8.2</aspectjweaver.version>
 		<lombok.version>1.16.4</lombok.version>
