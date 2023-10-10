@@ -59,10 +59,10 @@
 		<!-- 设置后缀，即视图的扩展名 -->
 		<property name="suffix" value=".jsp" />
 	</bean>
-	<bean class="com.xmbl.util.SpringApplicationContextHolder" /> 
+	<bean class="com.lung.util.SpringApplicationContextHolder" />
 	<mvc:resources location="/" mapping="/**" />
 	
-	<!-- <bean class="com.xmbl.config.SwaggerConfig"/>刚才写的swagger配置类
+	<!-- <bean class="com.lung.config.SwaggerConfig"/>刚才写的swagger配置类
     <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>必须
 	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" /> -->
 

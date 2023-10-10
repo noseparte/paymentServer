@@ -152,7 +152,7 @@
           encoder is required
           <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
      </appender> -->
-    <logger name="com.xmbl" level="DEBUG"/>
+    <logger name="com.lung" level="DEBUG"/>
     <!-- root级别   DEBUG -->
     <root>
         <!-- 打印debug级别日志及以上级别日志 -->

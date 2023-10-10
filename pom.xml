@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.xmbl</groupId>
+	<groupId>com.lung</groupId>
 	<artifactId>Infrastructure</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -270,27 +270,6 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
-		</profile>
-		<!-- 测试环境 -->
-		<profile>
-			<id>test</id>
-			<properties>
-				<env>test</env>
-			</properties>
-		</profile>
-		<!-- 预发布环境 -->
-		<profile>
-			<id>pre</id>
-			<properties>
-				<env>pre</env>
-			</properties>
-		</profile>
-		<!-- 生产环境 -->
-		<profile>
-			<id>pro</id>
-			<properties>
-				<env>pro</env>
-			</properties>
 		</profile>
 	</profiles>
 
