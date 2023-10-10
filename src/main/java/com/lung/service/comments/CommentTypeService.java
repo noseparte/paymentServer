@@ -8,7 +8,7 @@ import com.lung.dao.impl.comments.CommentsTypeDaoImpl;
 
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  CommentTypeService 
  * @创建时间:  2018年5月7日 下午5:28:34

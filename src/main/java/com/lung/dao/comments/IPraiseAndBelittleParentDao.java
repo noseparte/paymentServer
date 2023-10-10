@@ -7,7 +7,7 @@ import com.lung.model.comments.PraiseAndBelittleParentDetail;
 import com.lung.mongo.dao.GeneralDao;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  IPraiseAndBelittleStory 
  * @创建时间:  2017年12月21日 上午10:08:38

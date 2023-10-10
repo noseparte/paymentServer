@@ -19,7 +19,7 @@ import com.lung.model.comments.PraiseAndBelittleParentDetail;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  PraiseAndBelittleStoryDetailService 
  * @创建时间:  2017年12月20日 下午9:49:58

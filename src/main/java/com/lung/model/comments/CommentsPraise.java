@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
  * 
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  StoryCommentsPraise 
  * @创建时间:  2017年12月21日 下午6:49:31

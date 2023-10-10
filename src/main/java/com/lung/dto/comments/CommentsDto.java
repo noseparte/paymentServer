@@ -7,7 +7,7 @@ import com.lung.util.DateUtils;
 import lombok.Data;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  storyCommentsDto 
  * @创建时间:  2017年12月22日 下午12:49:44

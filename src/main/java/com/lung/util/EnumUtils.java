@@ -3,7 +3,7 @@ package com.lung.util;
 import com.lung.enumeration.EnumSortTypeCode;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  EnumUtils 
  * @创建时间:  2017年12月22日 上午10:27:52

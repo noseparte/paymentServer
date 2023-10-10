@@ -15,7 +15,7 @@ import com.lung.mongo.dao.GeneralICommentReportDaoImpl;
 import com.lung.util.LetterUtils;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名: StoryCommentsReplysDao
  * @创建时间: 2017年12月22日 下午5:58:06

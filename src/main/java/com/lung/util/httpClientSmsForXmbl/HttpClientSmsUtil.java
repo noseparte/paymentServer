@@ -8,7 +8,7 @@ import com.lung.constant.SmsContant;
 import com.lung.util.XmblLoggerUtil;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  HttpClientSmsUtil 
  * @创建时间:  2018年1月3日 上午10:14:50

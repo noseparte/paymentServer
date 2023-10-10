@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  PlatformSendYouXiServerUtil 
  * @创建时间:  2018年3月9日 下午6:24:00

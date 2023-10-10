@@ -14,7 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 import lombok.Data;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名: EmailMessage
  * @创建时间: 2018年1月4日 下午12:47:29

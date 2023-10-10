@@ -25,7 +25,7 @@ import com.lung.service.comments.CommentsService;
 import com.lung.web.api.bean.Route;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  StoryCommentsPraiseController 
  * @创建时间:  2017年12月21日 下午6:01:45

@@ -15,7 +15,7 @@ import com.lung.mongo.dao.GeneralICommentReportDaoImpl;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  StoryCommentsPraiseDao 
  * @创建时间:  2017年12月22日 下午2:00:18

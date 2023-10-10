@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.lung.util.XmblLoggerUtil;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  EmailClient 
  * @创建时间:  2018年1月4日 下午9:19:25

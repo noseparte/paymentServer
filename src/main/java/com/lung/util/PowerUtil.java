@@ -9,7 +9,7 @@ import java.util.List;
  * <br></br>
  * 备注:暂时用于18位身份证最后一位验证计算
  * 
- * @author sunbenbao
+ * @author noseparte
  *
  */
 public class PowerUtil {

@@ -6,7 +6,7 @@ import com.lung.model.report.Report;
 import com.lung.mongo.dao.GeneralDao;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  IReportDao 
  * @创建时间:  2017年12月27日 下午12:36:46

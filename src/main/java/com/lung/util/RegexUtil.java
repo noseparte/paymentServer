@@ -14,7 +14,7 @@ import org.springframework.util.Assert;
  * <br>
  * </br>
  * 
- * @author sunbenbao
+ * @author noseparte
  * 
  */
 public class RegexUtil {

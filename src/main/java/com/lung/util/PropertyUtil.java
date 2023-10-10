@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Properties;
 /**
  * 读取配置文件 util
- * @author sunbenbao
+ * @author noseparte
  *
  */
 public class PropertyUtil {

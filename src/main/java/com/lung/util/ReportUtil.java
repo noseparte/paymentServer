@@ -6,7 +6,7 @@ import com.lung.enumeration.EnumReportCauseCode;
 import com.lung.enumeration.EnumReportCode;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  ReportUtil 
  * @创建时间:  2017年12月27日 上午11:20:51

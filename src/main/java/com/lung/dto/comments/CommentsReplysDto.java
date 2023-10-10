@@ -5,7 +5,7 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  StoryCommentsReplysDto 
  * @创建时间:  2017年12月22日 下午6:16:30

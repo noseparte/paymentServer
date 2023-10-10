@@ -36,7 +36,7 @@ import com.lung.web.api.bean.Route;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名: StoryCommentsController
  * @创建时间: 2017年12月21日 下午6:01:45

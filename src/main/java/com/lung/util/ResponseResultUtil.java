@@ -4,7 +4,7 @@ import com.lung.dto.ResponseResult;
 import com.lung.enumeration.EnumResCode;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  ResponseResultUtil 
  * @创建时间:  2018年1月2日 下午7:42:05

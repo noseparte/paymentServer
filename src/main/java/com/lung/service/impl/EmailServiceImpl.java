@@ -7,7 +7,7 @@ import com.lung.service.EmailService;
 import com.lung.util.email.EmailUtils;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  EmailServiceImpl 
  * @创建时间:  2018年1月4日 下午8:45:01

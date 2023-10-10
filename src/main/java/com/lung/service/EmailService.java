@@ -3,7 +3,7 @@ package com.lung.service;
 import com.alibaba.fastjson.JSONObject;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  EmailService 
  * @创建时间:  2018年1月4日 下午8:44:38

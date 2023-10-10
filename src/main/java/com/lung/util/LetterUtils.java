@@ -1,6 +1,6 @@
 package com.lung.util;
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  LetterUtils 
  * @创建时间:  2017年12月21日 下午8:16:03

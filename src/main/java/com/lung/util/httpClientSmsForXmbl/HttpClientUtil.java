@@ -22,7 +22,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.lung.util.XmblLoggerUtil;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  SendSmsPostUtil 
  * @创建时间:  2018年1月2日 下午8:56:05

@@ -3,7 +3,7 @@ package com.lung.util.email;
 import com.lung.util.PropertyUtil;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  MailConstant 
  * @创建时间:  2018年1月4日 下午8:26:40

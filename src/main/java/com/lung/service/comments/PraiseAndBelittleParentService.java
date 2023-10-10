@@ -13,7 +13,7 @@ import com.lung.model.comments.PraiseAndBelittleParentDetail;
 
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  PraiseAndBelittleStoryService 
  * @创建时间:  2017年12月20日 下午9:49:06

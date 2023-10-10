@@ -8,7 +8,7 @@ import com.lung.dao.comments.ICommentsPraiseDao;
 import com.lung.model.comments.CommentsPraise;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  StoryCommentsPraiseService 
  * @创建时间:  2017年12月22日 下午1:58:04

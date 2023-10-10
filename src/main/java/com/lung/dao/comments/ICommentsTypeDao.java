@@ -4,7 +4,7 @@ import com.lung.model.comments.CommentType;
 import com.lung.mongo.dao.GeneralDao;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  IStoryCommentsDao 
  * @创建时间:  2017年12月21日 下午9:05:16

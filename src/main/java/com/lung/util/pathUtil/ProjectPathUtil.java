@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 获取项目路劲工具类
  * 
- * @author sunbenbao
+ * @author noseparte
  *
  */
 public class ProjectPathUtil {

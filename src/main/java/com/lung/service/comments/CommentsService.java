@@ -27,7 +27,7 @@ import com.lung.util.platformSendYxServerUtil.PlatformSendYouXiServerUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名: StoryCommentsService
  * @创建时间: 2017年12月21日 下午8:58:19

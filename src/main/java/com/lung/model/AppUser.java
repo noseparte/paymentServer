@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import lombok.Data;
 
 /**
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  AppUser 
  * @创建时间:  2018年4月24日 上午11:44:59

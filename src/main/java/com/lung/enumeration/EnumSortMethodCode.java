@@ -2,7 +2,7 @@ package com.lung.enumeration;
 
 /**
  * 排序方式
- * @author: sunbenbao
+ * @author: noseparte
  * @Email: 1402614629@qq.com
  * @类名:  EnumSortMethodCode 
  * @创建时间:  2017年12月21日 下午8:46:38
